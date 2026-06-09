@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 40" fill="none">
+  <path d="M0 20 Q50 8 100 20 Q150 32 200 20 Q250 8 300 20 Q350 32 400 20 Q450 8 500 20 Q550 32 600 20 Q650 8 700 20 Q750 32 800 20" stroke="#D4A853" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M0 20 Q50 32 100 20 Q150 8 200 20 Q250 32 300 20 Q350 8 400 20 Q450 32 500 20 Q550 8 600 20 Q650 32 700 20 Q750 8 800 20" stroke="#C1440E" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <circle cx="400" cy="20" r="6" fill="#D4A853"/>
+  <circle cx="400" cy="20" r="3" fill="#C1440E"/>
+  <circle cx="200" cy="20" r="4" fill="#D4A853" opacity="0.6"/>
+  <circle cx="600" cy="20" r="4" fill="#D4A853" opacity="0.6"/>
+</svg>
