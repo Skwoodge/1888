@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, BookOpen, Landmark, Users, ChevronDown } from "lucide-react";
+import { ArrowRight, BookOpen, Landmark, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionReveal from "@/components/SectionReveal";
 import ScrollDivider from "@/components/ScrollDivider";
@@ -92,14 +92,6 @@ export default function Index() {
                 Get Involved
               </Button>
             </Link>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-          <div className="flex flex-col items-center gap-2 text-white/50 animate-scroll-hint">
-            <span className="text-xs font-body tracking-widest uppercase">Scroll</span>
-            <ChevronDown className="w-5 h-5" />
           </div>
         </div>
       </section>
