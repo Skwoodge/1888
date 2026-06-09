@@ -22,9 +22,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-terracotta flex items-center justify-center text-white font-display font-bold text-lg shadow-lg">
-                1888
-              </div>
+                <img
+                  src="/assets/logo.png"
+                  alt="1888 Americano Society Logo"
+                  className="w-12 h-12 rounded-full object-cover shadow-lg border-2 border-gold/30"
+                />
               <div>
                 <span className="font-display text-xl font-bold text-white leading-tight block">
                   Americano Society
