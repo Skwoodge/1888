@@ -29,7 +29,7 @@ export default function Footer() {
                 />
               <div>
                 <span className="font-display text-xl font-bold text-white leading-tight block">
-                  Americano Society
+                  1888 Americano Society
                 </span>
                 <span className="text-xs text-gold tracking-widest uppercase">
                   Prescott, Arizona

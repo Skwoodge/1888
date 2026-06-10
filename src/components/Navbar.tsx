@@ -51,7 +51,7 @@ export default function Navbar() {
               "font-display text-lg font-bold leading-tight block transition-colors duration-500",
               scrolled ? "text-charcoal" : "text-white"
             )}>
-              Americano Society
+              1888 Americano Society
             </span>
             <span className={cn(
               "text-xs font-body tracking-widest uppercase transition-colors duration-500",
