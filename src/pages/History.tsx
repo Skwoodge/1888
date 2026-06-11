@@ -235,7 +235,7 @@ export default function History() {
 
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-px bg-gold/30" />
+            <div className="absolute left-7 sm:left-10 top-0 bottom-0 w-px bg-gold/30" />
 
             <div className="space-y-12">
               {timeline.map((item, i) => (
@@ -243,7 +243,7 @@ export default function History() {
                   <div className="flex gap-6 sm:gap-8">
                     {/* Dot */}
                     <div className="relative flex-shrink-0">
-                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-terracotta flex items-center justify-center text-white font-display font-bold text-xs sm:text-sm shadow-lg border-4 border-cream z-10 relative">
+                      <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-terracotta flex items-center justify-center text-white font-display font-bold text-[10px] sm:text-xs leading-tight text-center shadow-lg border-4 border-cream z-10 relative px-1">
                         {item.year}
                       </div>
                     </div>
