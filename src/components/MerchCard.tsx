@@ -1,35 +1,42 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+
 interface MerchCardProps {
   name: string;
   price: string;
-  description: string;
-  comingSoon?: boolean;
-  delay?: number;
+  image?: string;
+  available?: boolean;
 }
 
-export default function MerchCard({ name, price, description, comingSoon = true, delay = 0 }: MerchCardProps) {
+const MerchCard = ({ name, price, image, available = false }: MerchCardProps) => {
   return (
-    <div
-      className="rounded-2xl border border-gold/20 bg-cream overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:border-gold/40 group"
-      style={{ animationDelay: `${delay}ms` }}
-    >
-      <div className="aspect-square bg-gradient-to-br from-terracotta/5 to-gold/10 flex items-center justify-center relative overflow-hidden">
-        <div className="w-24 h-24 rounded-full bg-terracotta/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-          <span className="font-display text-3xl font-bold text-terracotta/40">1888</span>
-        </div>
-        {comingSoon && (
-          <div className="absolute top-4 right-4 bg-charcoal/80 text-cream text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-            Coming Soon
+    <Card className="group overflow-hidden bg-[#1E1E1E]/50 border-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-[#D4A853]/40 hover:bg-[#1E1E1E]/80">
+      <div className="aspect-square bg-gradient-to-br from-[#C1440E]/5 to-[#D4A853]/5 flex items-center justify-center overflow-hidden relative">
+        {image ? (
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+        ) : (
+          <div className="text-[#D4A853]/20 text-6xl font-['Playfair_Display'] transition-transform duration-500 group-hover:scale-110 group-hover:text-[#D4A853]/30">
+            1888
           </div>
         )}
+        {!available && (
+          <Badge className="absolute top-3 right-3 bg-[#C1440E] text-white text-xs">
+            Coming Soon
+          </Badge>
+        )}
       </div>
-      <div className="p-5">
-        <h3 className="font-display text-lg font-bold text-charcoal">{name}</h3>
-        <p className="text-sm text-charcoal/50 mt-1">{description}</p>
-        <div className="flex items-center justify-between mt-4">
-          <span className="font-display text-xl font-bold text-terracotta">{price}</span>
-          <span className="text-xs text-charcoal/40 uppercase tracking-wider">Contact to Order</span>
-        </div>
-      </div>
-    </div>
+      <CardContent className="p-4 text-center">
+        <h3 className="font-['Playfair_Display'] text-white text-lg mb-1 group-hover:text-[#D4A853] transition-colors duration-300">
+          {name}
+        </h3>
+        <p className="text-[#D4A853] font-semibold">{price}</p>
+      </CardContent>
+    </Card>
   );
-}
+};
+
+export default MerchCard;

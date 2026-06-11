@@ -1,107 +1,113 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
-const footerLinks = [
-  { to: "/", label: "Home" },
-  { to: "/history", label: "Our History" },
-  { to: "/juan-leivas", label: "Juan Leivas" },
-  { to: "/events", label: "Events" },
-  { to: "/get-involved", label: "Get Involved" },
-  { to: "/donate", label: "Donate" },
-  { to: "/merch", label: "Merch" },
-];
-
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-charcoal text-white/80">
-      {/* Rope divider top */}
-      <div className="h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer className="bg-[#1E1E1E] text-white pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-                <img
-                  src="/assets/logo.png"
-                  alt="1888 Americano Society Logo"
-                  className="w-12 h-12 rounded-full object-cover shadow-lg border-2 border-gold/30"
-                />
-              <div>
-                <span className="font-display text-xl font-bold text-white leading-tight block">
-                  1888 Americano Society
-                </span>
-                <span className="text-xs text-gold tracking-widest uppercase">
-                  Prescott, Arizona
-                </span>
-              </div>
-            </div>
-            <p className="text-white/60 font-body max-w-md leading-relaxed mt-4">
+          <div className="lg:col-span-1">
+            <Link to="/" className="inline-block mb-4">
+              <img
+                src="/1888_logo.png"
+                alt="1888 Americano Society"
+                className="h-14 w-auto"
+              />
+            </Link>
+            <p className="text-white/60 text-sm leading-relaxed italic mb-4">
               Honoring America, Preserving Heritage, Strengthening Community.
-              Celebrating the Mexican-American heritage behind the World's Oldest
-              Rodeo and the American West.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-display text-lg font-semibold text-gold mb-4">
+            <h4 className="font-['Playfair_Display'] text-[#D4A853] text-lg font-semibold mb-4">
               Quick Links
-            </h3>
-            <nav className="flex flex-col gap-2">
-              {footerLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className="text-white/60 hover:text-gold transition-colors duration-200 text-sm font-body"
-                >
-                  {link.label}
-                </Link>
+            </h4>
+            <ul className="space-y-3">
+              {[
+                { to: "/history", label: "Our History" },
+                { to: "/juan-leivas", label: "Juan Leivas" },
+                { to: "/events", label: "Events" },
+                { to: "/get-involved", label: "Get Involved" },
+                { to: "/donate", label: "Donate" },
+                { to: "/merch", label: "Merch" },
+              ].map((link) => (
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    className="text-white/60 hover:text-[#D4A853] transition-colors duration-300 text-sm"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
               ))}
-            </nav>
+            </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact Us */}
           <div>
-            <h3 className="font-display text-lg font-semibold text-gold mb-4">
+            <h4 className="font-['Playfair_Display'] text-[#D4A853] text-lg font-semibold mb-4">
               Contact Us
-            </h3>
-            <div className="space-y-4">
+            </h4>
+            <ul className="space-y-3">
+              <li className="flex items-center space-x-3 text-white/60 text-sm">
+                <Mail size={16} className="text-[#C1440E] shrink-0" />
+                <a
+                  href="mailto:info.1888society@gmail.com"
+                  className="hover:text-[#D4A853] transition-colors"
+                >
+                  info.1888society@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center space-x-3 text-white/60 text-sm">
+                <Phone size={16} className="text-[#C1440E] shrink-0" />
+                <a
+                  href="tel:+19287138216"
+                  className="hover:text-[#D4A853] transition-colors"
+                >
+                  (928) 713-8216
+                </a>
+              </li>
+              <li className="flex items-center space-x-3 text-white/60 text-sm">
+                <MapPin size={16} className="text-[#C1440E] shrink-0" />
+                <span>Prescott, Arizona</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Connect */}
+          <div>
+            <h4 className="font-['Playfair_Display'] text-[#D4A853] text-lg font-semibold mb-4">
+              Connect With Us
+            </h4>
+            <p className="text-white/60 text-sm mb-4">
+              Join the 1888 Americano Society and help preserve Prescott's
+              heritage.
+            </p>
+            <div className="flex space-x-4">
               <a
                 href="mailto:info.1888society@gmail.com"
-                className="flex items-center gap-2 text-white/60 hover:text-gold transition-colors text-sm font-body"
+                className="w-10 h-10 bg-[#C1440E]/20 rounded-full flex items-center justify-center text-[#C1440E] hover:bg-[#C1440E] hover:text-white transition-all duration-300"
+                aria-label="Email us"
               >
-                <Mail className="w-4 h-4 text-gold flex-shrink-0" />
-                <span>info.1888society@gmail.com</span>
+                <Mail size={18} />
               </a>
-              <a
-                href="tel:9287138216"
-                className="flex items-center gap-2 text-white/60 hover:text-gold transition-colors text-sm font-body"
-              >
-                <Phone className="w-4 h-4 text-gold flex-shrink-0" />
-                <span>(928) 713-8216</span>
-              </a>
-              <div className="flex items-center gap-2 text-white/60 text-sm font-body">
-                <MapPin className="w-4 h-4 text-gold flex-shrink-0" />
-                <span>Prescott, Arizona</span>
-              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-xs font-body">
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 pt-8 text-center">
+          <p className="text-white/40 text-sm">
             &copy; {new Date().getFullYear()} 1888 Americano Society. All rights
             reserved.
           </p>
-          <div className="flex items-center gap-4">
-            <span className="text-white/40 text-xs font-body">
-              Honoring the heritage of Prescott, Arizona
-            </span>
-          </div>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

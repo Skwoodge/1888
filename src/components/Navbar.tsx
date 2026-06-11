@@ -3,135 +3,116 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
 const navLinks = [
-  { to: "/", label: "Home" },
-  { to: "/history", label: "Our History" },
-  { to: "/juan-leivas", label: "Juan Leivas" },
-  { to: "/events", label: "Events" },
-  { to: "/get-involved", label: "Get Involved" },
-  { to: "/donate", label: "Donate" },
-  { to: "/merch", label: "Merch" },
+  { path: "/", label: "Home" },
+  { path: "/history", label: "History" },
+  { path: "/juan-leivas", label: "Juan Leivas" },
+  { path: "/events", label: "Events" },
+  { path: "/get-involved", label: "Get Involved" },
+  { path: "/donate", label: "Donate" },
+  { path: "/merch", label: "Merch" },
 ];
 
-export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const location = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(total > 0 ? (window.scrollY / total) * 100 : 0);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+    setIsOpen(false);
+  }, [location]);
 
   return (
-    <header
+    <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        scrolled
-          ? "bg-cream/95 backdrop-blur-md shadow-md py-3"
-          : "bg-transparent py-5"
+        isScrolled
+          ? "bg-[#1E1E1E]/95 backdrop-blur-md shadow-lg border-b border-[#D4A853]/20"
+          : "bg-transparent"
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <img
-            src="/assets/logo.png"
-            alt="1888 Americano Society Logo"
-            className="w-12 h-12 rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300 border-2 border-gold/30"
-          />
-          <div className="hidden sm:block">
-            <span className={cn(
-              "font-display text-lg font-bold leading-tight block transition-colors duration-500",
-              scrolled ? "text-charcoal" : "text-white"
-            )}>
-              1888 Americano Society
-            </span>
-            <span className={cn(
-              "text-xs font-body tracking-widest uppercase transition-colors duration-500",
-              scrolled ? "text-adobe" : "text-gold"
-            )}>
-              Prescott, AZ
-            </span>
-          </div>
-        </Link>
-
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className={cn(
-                "px-3 py-2 rounded-lg text-sm font-medium font-body transition-all duration-300",
-                location.pathname === link.to
-                  ? "bg-terracotta text-white shadow-md"
-                  : scrolled
-                    ? "text-charcoal hover:bg-sand hover:text-terracotta"
-                    : "text-white/90 hover:bg-white/10 hover:text-white"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Link to="/donate">
-            <Button className="ml-3 bg-terracotta hover:bg-terracotta-600 text-white font-body rounded-xl px-5 shadow-lg shadow-terracotta/20 hover:shadow-terracotta/40 transition-all duration-300 hover:-translate-y-0.5">
-              Donate
-            </Button>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          <Link to="/" className="flex items-center space-x-3 shrink-0 group">
+            <img
+              src="/1888_logo.png"
+              alt="1888 Americano Society Logo"
+              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
-        </nav>
 
-        {/* Mobile Nav */}
-        <Sheet>
-          <SheetTrigger asChild className="lg:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              className={cn(
-                "rounded-xl",
-                scrolled ? "text-charcoal hover:bg-sand" : "text-white hover:bg-white/10"
-              )}
-            >
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Open menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="bg-cream w-72 p-0">
-            <div className="p-6">
-              <SheetTitle className="font-display text-xl text-charcoal mb-6">
-                1888 Americano Society
-              </SheetTitle>
-              <nav className="flex flex-col gap-1">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.to}
-                    to={link.to}
-                    className={cn(
-                      "px-4 py-3 rounded-xl text-base font-medium font-body transition-all duration-200",
-                      location.pathname === link.to
-                        ? "bg-terracotta text-white"
-                        : "text-charcoal hover:bg-sand hover:text-terracotta"
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-              <Link to="/donate" className="block mt-6">
-                <Button className="w-full bg-terracotta hover:bg-terracotta-600 text-white font-body rounded-xl py-6 text-base shadow-lg">
-                  Donate Now
-                </Button>
+          <div className="hidden lg:flex items-center space-x-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={cn(
+                  "px-4 py-2 text-sm font-medium transition-all duration-300 rounded-md relative",
+                  location.pathname === link.path
+                    ? "text-[#D4A853] bg-[#D4A853]/10"
+                    : "text-white/80 hover:text-[#D4A853] hover:bg-white/5"
+                )}
+              >
+                {link.label}
+                {location.pathname === link.path && (
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-0.5 bg-[#D4A853] rounded-full" />
+                )}
               </Link>
-            </div>
-          </SheetContent>
-        </Sheet>
+            ))}
+          </div>
+
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-white p-2 hover:bg-white/10 rounded-md transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
-    </header>
+
+      {isOpen && (
+        <div className="lg:hidden bg-[#1E1E1E]/98 backdrop-blur-md border-t border-[#D4A853]/20">
+          <div className="px-4 py-4 space-y-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={cn(
+                  "block px-4 py-3 text-base font-medium rounded-md transition-all duration-200",
+                  location.pathname === link.path
+                    ? "text-[#D4A853] bg-[#D4A853]/10"
+                    : "text-white/80 hover:text-[#D4A853] hover:bg-white/5"
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Scroll Progress Bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-transparent">
+        <div
+          className="h-full bg-gradient-to-r from-[#C1440E] via-[#D4A853] to-[#C1440E] transition-[width] duration-150 ease-out"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
+    </nav>
   );
-}
+};
+
+export default Navbar;

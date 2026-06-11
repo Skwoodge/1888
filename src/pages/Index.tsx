@@ -36,11 +36,12 @@ export default function Index() {
               heroRef.isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="w-28 h-28 sm:w-36 sm:h-36 mx-auto mb-8 shadow-2xl">
+            <div className="relative mx-auto mb-8 w-44 h-44 sm:w-56 sm:h-56 md:w-64 md:h-64">
+              <div className="absolute inset-0 rounded-full border-2 border-gold/40 shadow-[0_0_40px_rgba(212,168,83,0.3)]" />
               <img
                 src="/1888_logo.png"
                 alt="1888 Americano Society Logo"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(212,168,83,0.4)]"
               />
             </div>
           </div>

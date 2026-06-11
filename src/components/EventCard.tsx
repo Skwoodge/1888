@@ -1,39 +1,39 @@
+import { Calendar, MapPin } from "lucide-react";
+
 interface EventCardProps {
   title: string;
   date: string;
-  location: string;
+  location?: string;
   description: string;
-  featured?: boolean;
-  delay?: number;
+  highlight?: boolean;
 }
 
-export default function EventCard({ title, date, location, description, featured = false, delay = 0 }: EventCardProps) {
+const EventCard = ({ title, date, location, description, highlight = false }: EventCardProps) => {
   return (
     <div
-      className={`rounded-2xl p-6 sm:p-8 border transition-all duration-500 hover:-translate-y-1 hover:shadow-lg ${
-        featured
-          ? "border-terracotta/30 bg-gradient-to-br from-terracotta/5 to-gold/5"
-          : "border-gold/20 bg-cream hover:border-gold/40"
+      className={`group relative p-6 rounded-xl border transition-all duration-500 hover:-translate-y-1 hover:shadow-xl ${
+        highlight
+          ? "bg-gradient-to-br from-[#C1440E]/10 via-[#1E1E1E] to-[#D4A853]/10 border-[#D4A853]/30 hover:border-[#D4A853]/60 hover:shadow-[#C1440E]/10"
+          : "bg-[#1E1E1E]/50 border-white/10 hover:border-[#D4A853]/40 hover:bg-[#1E1E1E]/80 hover:shadow-[#D4A853]/5"
       }`}
-      style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-        <div className={`shrink-0 w-16 h-16 rounded-xl flex flex-col items-center justify-center ${
-          featured ? "bg-terracotta text-cream" : "bg-terracotta/10 text-terracotta"
-        }`}>
-          <span className="text-xs font-bold uppercase leading-none">
-            {date.split(" ")[0]}
-          </span>
-          <span className="text-xl font-display font-bold leading-none mt-0.5">
-            {date.split(" ")[1]}
-          </span>
-        </div>
-        <div className="flex-1">
-          <h3 className="font-display text-lg font-bold text-charcoal">{title}</h3>
-          <p className="text-xs text-charcoal/40 mt-1 uppercase tracking-wider">{location}</p>
-          <p className="text-sm text-charcoal/60 mt-3 leading-relaxed">{description}</p>
-        </div>
+      <div className="flex items-center space-x-2 text-[#D4A853] text-sm mb-3">
+        <Calendar size={16} className="group-hover:scale-110 transition-transform duration-300" />
+        <span className="font-medium">{date}</span>
+        {location && (
+          <>
+            <span className="text-white/30">•</span>
+            <MapPin size={14} />
+            <span className="text-white/60">{location}</span>
+          </>
+        )}
       </div>
+      <h3 className="text-xl font-['Playfair_Display'] text-white mb-2 group-hover:text-[#D4A853] transition-colors duration-300">
+        {title}
+      </h3>
+      <p className="text-white/70 leading-relaxed text-sm">{description}</p>
     </div>
   );
-}
+};
+
+export default EventCard;
