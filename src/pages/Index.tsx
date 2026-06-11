@@ -20,7 +20,7 @@ export default function Index() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
             style={{
-              backgroundImage: "url(/assets/hero-bg.jpg)",
+              backgroundImage: "url(/assets/hero-bg.png)",
               transform: `translateY(${heroRef.isRevealed ? "0%" : "5%"}) scale(1.05)`,
               transition: "transform 1.5s ease-out",
             }}
