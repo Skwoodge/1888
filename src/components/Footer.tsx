@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 
 const footerLinks = [
   { to: "/", label: "Home" },
@@ -72,21 +72,29 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Connect */}
+          {/* Contact */}
           <div>
             <h3 className="font-display text-lg font-semibold text-gold mb-4">
-              Connect With Us
+              Contact Us
             </h3>
-            <p className="text-white/60 text-sm font-body leading-relaxed mb-6">
-              Stay updated on events, heritage celebrations, and community
-              initiatives in Prescott.
-            </p>
-            <div className="w-32 h-32 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto bg-white rounded-lg flex items-center justify-center text-charcoal font-display font-bold text-xs mb-1">
-                  QR CODE
-                </div>
-                <span className="text-[10px] text-white/40">Scan to connect</span>
+            <div className="space-y-4">
+              <a
+                href="mailto:info.1888society@gmail.com"
+                className="flex items-center gap-2 text-white/60 hover:text-gold transition-colors text-sm font-body"
+              >
+                <Mail className="w-4 h-4 text-gold flex-shrink-0" />
+                <span>info.1888society@gmail.com</span>
+              </a>
+              <a
+                href="tel:9287138216"
+                className="flex items-center gap-2 text-white/60 hover:text-gold transition-colors text-sm font-body"
+              >
+                <Phone className="w-4 h-4 text-gold flex-shrink-0" />
+                <span>(928) 713-8216</span>
+              </a>
+              <div className="flex items-center gap-2 text-white/60 text-sm font-body">
+                <MapPin className="w-4 h-4 text-gold flex-shrink-0" />
+                <span>Prescott, Arizona</span>
               </div>
             </div>
           </div>

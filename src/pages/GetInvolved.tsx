@@ -286,9 +286,9 @@ export default function GetInvolved() {
                     </div>
                     <div>
                       <p className="font-body text-sm text-charcoal/50 mb-0.5">Phone</p>
-                      <p className="font-body text-charcoal font-medium">
-                        Coming soon
-                      </p>
+                      <a href="tel:9287138216" className="font-body text-charcoal font-medium hover:text-terracotta transition-colors">
+                        (928) 713-8216
+                      </a>
                     </div>
                   </div>
                 </div>
