@@ -25,8 +25,8 @@ export default function Index() {
               transition: "transform 1.5s ease-out",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-terracotta/50 to-charcoal/90" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/55 via-terracotta/30 to-charcoal/65" />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-transparent" />
         </div>
 
         {/* Content */}
