@@ -9,11 +9,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <img
-                src="/1888_logo.png"
-                alt="1888 Americano Society"
-                className="h-14 w-auto"
-              />
+              <span className="font-['Playfair_Display'] text-xl font-bold text-[#D4A853]">
+                1888 American Society
+              </span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed italic mb-4">
               Honoring America, Preserving Heritage, Strengthening Community.

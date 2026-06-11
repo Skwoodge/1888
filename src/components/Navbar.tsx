@@ -45,12 +45,10 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center space-x-3 shrink-0 group">
-            <img
-              src="/1888_logo.png"
-              alt="1888 Americano Society Logo"
-              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
-            />
+          <Link to="/" className="flex items-center shrink-0 group">
+            <span className="font-['Playfair_Display'] text-xl font-bold text-[#D4A853] tracking-wide transition-all duration-300 group-hover:text-white">
+              1888 American Society
+            </span>
           </Link>
 
           <div className="hidden lg:flex items-center space-x-1">
