@@ -74,9 +74,9 @@ export default function Events() {
       <section className="py-20 sm:py-28 bg-cream">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionReveal>
-            <div className="bg-gradient-to-br from-terracotta to-terracotta-700 rounded-3xl p-8 sm:p-12 lg:p-16 text-white shadow-2xl shadow-terracotta/20 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-24 -translate-x-24" />
+            <div className="rounded-3xl p-8 sm:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden min-h-[400px] flex items-center">
+              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(/flag-backdrop.webp)' }} />
+              <div className="absolute inset-0 bg-charcoal/70" />
               <div className="relative z-10">
                 <div className="flex items-center gap-2 text-gold mb-4">
                   <Calendar className="w-5 h-5" />

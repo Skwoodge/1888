@@ -41,17 +41,6 @@ export default function Footer() {
               Celebrating the Mexican-American heritage behind the World's Oldest
               Rodeo and the American West.
             </p>
-            <div className="flex items-center gap-2 mt-6 text-sm text-white/50">
-              <MapPin className="w-4 h-4 text-gold" />
-              <span>Prescott, Arizona</span>
-            </div>
-            <a
-              href="mailto:info.1888society@gmail.com"
-              className="flex items-center gap-2 mt-2 text-sm text-white/50 hover:text-gold transition-colors"
-            >
-              <Mail className="w-4 h-4 text-gold" />
-              <span>info.1888society@gmail.com</span>
-            </a>
           </div>
 
           {/* Quick Links */}
