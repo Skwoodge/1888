@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
               <span className="font-['Playfair_Display'] text-xl font-bold text-[#D4A853]">
-                1888 American Society
+                1888 Americano Society
               </span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed italic mb-4">

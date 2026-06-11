@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center shrink-0 group">
             <span className="font-['Playfair_Display'] text-xl font-bold text-[#D4A853] tracking-wide transition-all duration-300 group-hover:text-white">
-              1888 American Society
+              1888 Americano Society
             </span>
           </Link>
 
