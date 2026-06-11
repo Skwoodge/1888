@@ -8,7 +8,7 @@ export default function JuanLeivas() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-terracotta-900 to-charcoal" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(212,168,83,0.15),transparent_70%)]" />

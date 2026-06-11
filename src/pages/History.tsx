@@ -42,13 +42,8 @@ export default function History() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url(/american-usa-flag-wooden-backdrop.jpg)" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/60 to-charcoal/90" />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-terracotta-800 to-charcoal" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(212,168,83,0.1),transparent_60%)]" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
           <SectionReveal>
             <span className="inline-block text-gold font-body text-sm font-semibold tracking-widest uppercase mb-4">
