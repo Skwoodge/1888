@@ -45,7 +45,7 @@ export default function History() {
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url(/assets/history-bg.jpg)" }}
+            style={{ backgroundImage: "url(/american-usa-flag-wooden-backdrop.jpg)" }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/60 to-charcoal/90" />
         </div>
