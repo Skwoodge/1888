@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -10,21 +10,14 @@ import ScrollDivider from "@/components/ScrollDivider";
 import { toast } from "sonner";
 
 const involvementAreas = [
+  "Veteran / Service Member Marcher (4th of July Parade)",
+  "Family Member Representing a Veteran",
   "Parade Volunteer",
-  "Food & Cultural Experience",
-  "Fundraising",
-  "Story Collections",
-  "Veteran Participation in 4th of July Parade",
   "Float Construction",
+  "Fundraising & Sponsorship Outreach",
+  "Story Collections — Veteran & Heritage Histories",
+  "Food & Cultural Experience",
   "Property & Development Support (Senora Street / Granite Creek Park)",
-];
-
-const meetings = [
-  {
-    label: "General Meeting",
-    schedule: "Check back for updated meeting times",
-    location: "Prescott, AZ",
-  },
 ];
 
 export default function GetInvolved() {
@@ -74,223 +67,227 @@ export default function GetInvolved() {
               Make a Difference
             </span>
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Join the{" "}
-              <span className="text-gold italic">Society</span>
+              Get{" "}
+              <span className="text-gold italic">Involved</span>
             </h1>
             <p className="font-body text-white/70 text-lg sm:text-xl max-w-2xl mx-auto">
-              Whether you volunteer, share stories, or support our events —
-              there's a place for you in preserving Prescott's heritage.
+              Whether you're a veteran, a family member, or a community
+              supporter — there's a place for you in the 1888 Americano Society.
             </p>
           </SectionReveal>
         </div>
       </section>
 
-      {/* Volunteer Form */}
-      <section className="py-20 sm:py-28 bg-cream">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Urgent: Parade Volunteer Call */}
+      <section className="py-16 sm:py-20 bg-charcoal">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionReveal>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-charcoal mb-3">
-              Volunteer <span className="text-terracotta italic">Form</span>
-            </h2>
-            <p className="font-body text-charcoal/60 text-lg mb-10">
-              Tell us about yourself and how you'd like to get involved. We'll
-              be in touch!
-            </p>
-          </SectionReveal>
-
-          <SectionReveal delay={100}>
-            <form
-              onSubmit={handleSubmit}
-              className="bg-white rounded-2xl p-6 sm:p-10 border border-gold/15 shadow-sm space-y-6"
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="bg-terracotta/10 border-2 border-terracotta/30 rounded-3xl p-8 sm:p-10">
+              <div className="flex items-start gap-4 mb-6">
+                <AlertTriangle className="w-8 h-8 text-terracotta shrink-0 mt-1" />
                 <div>
-                  <Label htmlFor="name" className="font-body text-charcoal mb-1.5 block">
-                    Name <span className="text-terracotta">*</span>
-                  </Label>
-                  <Input
-                    id="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Your full name"
-                    className="rounded-xl border-gold/30 focus:border-terracotta focus:ring-terracotta font-body"
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="email" className="font-body text-charcoal mb-1.5 block">
-                    Email <span className="text-terracotta">*</span>
-                  </Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="you@example.com"
-                    className="rounded-xl border-gold/30 focus:border-terracotta focus:ring-terracotta font-body"
-                    required
-                  />
+                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-2">
+                    4th of July Parade — We Need Marchers
+                  </h2>
+                  <p className="font-body text-white/70 text-lg leading-relaxed">
+                    We are looking for <strong className="text-gold">service men and women
+                    with Mexican heritage</strong> to march in the 4th of July Parade.
+                    If you are a veteran or a family member representing a veteran
+                    from Yavapai County, we want to honor you.
+                  </p>
                 </div>
               </div>
-
-              <div>
-                <Label htmlFor="phone" className="font-body text-charcoal mb-1.5 block">
-                  Phone
-                </Label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  placeholder="(555) 123-4567"
-                  className="rounded-xl border-gold/30 focus:border-terracotta focus:ring-terracotta font-body"
-                />
-              </div>
-
-              <div>
-                <Label className="font-body text-charcoal mb-3 block">
-                  Areas of Interest
-                </Label>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {involvementAreas.map((area) => (
-                    <label
-                      key={area}
-                      className="flex items-start gap-3 p-3 rounded-xl border border-gold/15 hover:border-gold/40 transition-colors cursor-pointer"
-                    >
-                      <Checkbox
-                        checked={selectedAreas.includes(area)}
-                        onCheckedChange={() => toggleArea(area)}
-                        className="mt-0.5 border-gold/40 data-[state=checked]:bg-terracotta data-[state=checked]:border-terracotta"
-                      />
-                      <span className="font-body text-sm text-charcoal/70 leading-snug">
-                        {area}
-                      </span>
-                    </label>
-                  ))}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ml-12">
+                <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                  <p className="font-body text-white/80 font-semibold mb-1">10–12 Veterans</p>
+                  <p className="font-body text-white/50 text-sm">Or one family member to represent each veteran</p>
+                </div>
+                <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                  <p className="font-body text-white/80 font-semibold mb-1">15 Service Members</p>
+                  <p className="font-body text-white/50 text-sm">In uniform or wearing a shirt with name + branch</p>
+                </div>
+                <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                  <p className="font-body text-white/80 font-semibold mb-1">10×25 ft Arizona Flag</p>
+                  <p className="font-body text-white/50 text-sm">To be carried by marchers during the parade</p>
+                </div>
+                <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                  <p className="font-body text-terracotta font-bold mb-1">Deadline: June 24</p>
+                  <p className="font-body text-white/50 text-sm">For custom shirt printing — sign up now</p>
                 </div>
               </div>
-
-              <div>
-                <Label htmlFor="message" className="font-body text-charcoal mb-1.5 block">
-                  Message / Notes
-                </Label>
-                <Textarea
-                  id="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Tell us about yourself, your interests, or any questions..."
-                  rows={4}
-                  className="rounded-xl border-gold/30 focus:border-terracotta focus:ring-terracotta font-body resize-none"
-                />
+              <div className="ml-12 mt-6">
+                <a href="mailto:info.1888society@gmail.com?subject=Parade%20Volunteer%20Signup">
+                  <Button
+                    size="lg"
+                    className="bg-gold hover:bg-gold-500 text-charcoal font-body rounded-xl px-8 py-4 text-lg shadow-xl shadow-gold/20 transition-all duration-300 hover:-translate-y-1"
+                  >
+                    Sign Up to March
+                    <Mail className="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
               </div>
-
-              <Button
-                type="submit"
-                className="w-full bg-terracotta hover:bg-terracotta-600 text-white font-body rounded-xl py-6 text-lg shadow-lg shadow-terracotta/20 transition-all duration-300 hover:-translate-y-0.5"
-              >
-                Submit Interest
-              </Button>
-            </form>
+            </div>
           </SectionReveal>
         </div>
       </section>
 
       <ScrollDivider />
 
-      {/* Meeting Schedule & Contact */}
-      <section className="py-20 sm:py-28 bg-sand/40">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Meeting Schedule */}
+      {/* Volunteer Form */}
+      <section className="py-20 sm:py-28 bg-cream">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Form */}
             <SectionReveal direction="left">
-              <div className="bg-white rounded-2xl p-8 border border-gold/15 shadow-sm h-full">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center">
-                    <Clock className="w-5 h-5 text-gold" />
-                  </div>
-                  <h2 className="font-display text-2xl font-bold text-charcoal">
-                    Meeting Schedule
-                  </h2>
-                </div>
-
-                <div className="space-y-4">
-                  {meetings.map((m) => (
-                    <div
-                      key={m.label}
-                      className="p-4 rounded-xl bg-sand/50 border border-gold/10"
-                    >
-                      <h3 className="font-body font-semibold text-charcoal mb-1">
-                        {m.label}
-                      </h3>
-                      <p className="font-body text-terracotta font-medium text-sm">
-                        {m.schedule}
-                      </p>
-                      <p className="font-body text-charcoal/50 text-sm flex items-center gap-1 mt-1">
-                        <MapPin className="w-3 h-3" />
-                        {m.location}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                <p className="font-body text-charcoal/40 text-sm mt-6">
-                  Check back for updated meeting times. We post updates on our
-                  events page and via email.
+              <div>
+                <span className="inline-block text-gold font-body text-sm font-semibold tracking-widest uppercase mb-4">
+                  Sign Up
+                </span>
+                <h2 className="font-display text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+                  Join the{" "}
+                  <span className="text-terracotta italic">Society</span>
+                </h2>
+                <p className="font-body text-charcoal/60 mb-8">
+                  Fill out the form below and we'll be in touch. Whether you
+                  want to march, volunteer, or support from behind the scenes
+                  — we'd love to have you.
                 </p>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Name *</Label>
+                    <Input
+                      id="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder="Your full name"
+                      className="border-gold/30 focus:border-terracotta"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email *</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="your@email.com"
+                      className="border-gold/30 focus:border-terracotta"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone</Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      placeholder="(xxx) xxx-xxxx"
+                      className="border-gold/30 focus:border-terracotta"
+                    />
+                  </div>
+                  <div className="space-y-3">
+                    <Label>Areas of Interest</Label>
+                    <div className="grid grid-cols-1 gap-3">
+                      {involvementAreas.map((area) => (
+                        <label
+                          key={area}
+                          className="flex items-start gap-3 cursor-pointer group"
+                        >
+                          <Checkbox
+                            checked={selectedAreas.includes(area)}
+                            onCheckedChange={() => toggleArea(area)}
+                            className="mt-0.5 border-gold/40 data-[state=checked]:bg-terracotta data-[state=checked]:border-terracotta"
+                          />
+                          <span className="font-body text-sm text-charcoal/70 group-hover:text-charcoal transition-colors">
+                            {area}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message / Notes</Label>
+                    <Textarea
+                      id="message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      placeholder="Tell us about yourself, your veteran connection, or any questions..."
+                      className="border-gold/30 focus:border-terracotta min-h-[120px]"
+                    />
+                  </div>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full bg-terracotta hover:bg-terracotta-600 text-white font-body rounded-xl px-8 py-4 text-lg shadow-xl shadow-terracotta/30 transition-all duration-300 hover:-translate-y-1"
+                  >
+                    Send via Email
+                    <Mail className="ml-2 h-5 w-5" />
+                  </Button>
+                </form>
               </div>
             </SectionReveal>
 
-            {/* Contact Info */}
+            {/* Info */}
             <SectionReveal direction="right">
-              <div className="bg-white rounded-2xl p-8 border border-gold/15 shadow-sm h-full">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-terracotta/10 flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-terracotta" />
-                  </div>
-                  <h2 className="font-display text-2xl font-bold text-charcoal">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="font-display text-2xl font-bold text-charcoal mb-4">
                     Contact Us
-                  </h2>
+                  </h3>
+                  <div className="space-y-4">
+                    <a
+                      href="mailto:info.1888society@gmail.com"
+                      className="flex items-center gap-3 text-charcoal/70 hover:text-terracotta transition-colors"
+                    >
+                      <Mail className="w-5 h-5 text-terracotta" />
+                      <span className="font-body">info.1888society@gmail.com</span>
+                    </a>
+                    <a
+                      href="tel:+19287138216"
+                      className="flex items-center gap-3 text-charcoal/70 hover:text-terracotta transition-colors"
+                    >
+                      <Phone className="w-5 h-5 text-terracotta" />
+                      <span className="font-body">(928) 713-8216</span>
+                    </a>
+                  </div>
                 </div>
 
-                <div className="space-y-6">
-                  <a
-                    href="mailto:info.1888society@gmail.com"
-                    className="flex items-start gap-4 group"
-                  >
-                    <div className="w-10 h-10 rounded-xl bg-terracotta/5 flex items-center justify-center flex-shrink-0 group-hover:bg-terracotta/10 transition-colors">
-                      <Mail className="w-5 h-5 text-terracotta" />
-                    </div>
-                    <div>
-                      <p className="font-body text-sm text-charcoal/50 mb-0.5">Email</p>
-                      <p className="font-body text-charcoal font-medium group-hover:text-terracotta transition-colors">
-                        info.1888society@gmail.com
-                      </p>
-                    </div>
-                  </a>
+                <div className="bg-sand/60 rounded-2xl p-6 border border-gold/20">
+                  <h3 className="font-display text-xl font-bold text-charcoal mb-3">
+                    What Happens Next?
+                  </h3>
+                  <ul className="space-y-3 font-body text-charcoal/60">
+                    <li className="flex items-start gap-3">
+                      <span className="text-terracotta font-bold mt-1">1.</span>
+                      <span>You reach out via form or email</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-terracotta font-bold mt-1">2.</span>
+                      <span>We connect you with the right volunteer coordinator</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-terracotta font-bold mt-1">3.</span>
+                      <span>You join us at the next meeting or event</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-terracotta font-bold mt-1">4.</span>
+                      <span>Together, we preserve and celebrate our heritage</span>
+                    </li>
+                  </ul>
+                </div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-terracotta/5 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-terracotta" />
-                    </div>
-                    <div>
-                      <p className="font-body text-sm text-charcoal/50 mb-0.5">Location</p>
-                      <p className="font-body text-charcoal font-medium">
-                        Prescott, Arizona
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-terracotta/5 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-terracotta" />
-                    </div>
-                    <div>
-                      <p className="font-body text-sm text-charcoal/50 mb-0.5">Phone</p>
-                      <a href="tel:9287138216" className="font-body text-charcoal font-medium hover:text-terracotta transition-colors">
-                        (928) 713-8216
-                      </a>
-                    </div>
-                  </div>
+                <div className="bg-terracotta/5 rounded-2xl p-6 border border-terracotta/20">
+                  <h3 className="font-display text-xl font-bold text-terracotta mb-3">
+                    Our Mission
+                  </h3>
+                  <p className="font-body text-charcoal/60 leading-relaxed italic">
+                    "The 1888 Americano Society recognizes, preserves, and
+                    celebrates the rich cultural heritage of Mexican Americans
+                    in Prescott, Arizona and the surrounding communities —
+                    through heritage education, community celebrations, and
+                    the recognition of those who served our country."
+                  </p>
                 </div>
               </div>
             </SectionReveal>

@@ -14,7 +14,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed italic mb-4">
-              Honoring America, Preserving Heritage, Strengthening Community.
+              Honoring the Heritage & Service of Mexican Americans in Prescott and the American West.
             </p>
           </div>
 
@@ -25,9 +25,8 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               {[
-                { to: "/history", label: "Our History" },
-                { to: "/juan-leivas", label: "Juan Leivas" },
-                { to: "/events", label: "Events" },
+                { to: "/heritage", label: "Our Heritage" },
+                { to: "/events", label: "Events & Sponsorship" },
                 { to: "/get-involved", label: "Get Involved" },
                 { to: "/donate", label: "Donate" },
                 { to: "/merch", label: "Merch" },
@@ -81,8 +80,8 @@ const Footer = () => {
               Connect With Us
             </h4>
             <p className="text-white/60 text-sm mb-4">
-              Join the 1888 Americano Society and help preserve Prescott's
-              heritage.
+              Join us in honoring the heritage and service of Mexican Americans
+              in Prescott and beyond.
             </p>
             <div className="flex space-x-4">
               <a

@@ -5,17 +5,17 @@ import ScrollDivider from "@/components/ScrollDivider";
 
 const tiers = [
   {
-    name: "Vaquero Supporter",
+    name: "Heritage Supporter",
     amount: "$25",
     icon: Heart,
-    desc: "Your contribution helps us share the stories of the vaqueros and Mexican-American cowboys who shaped the West.",
+    desc: "Help us share the stories of the vaqueros, Mexican-American veterans, and families who shaped our community.",
     color: "border-sage/30 hover:border-sage",
   },
   {
-    name: "Heritage Supporter",
+    name: "Community Supporter",
     amount: "$50",
     icon: BookOpen,
-    desc: "Support our educational programs that teach the true history of the American West and the cultures that built it.",
+    desc: "Support heritage education programs that teach the true history of Mexican Americans in Prescott and the American West.",
     color: "border-gold/30 hover:border-gold",
     featured: false,
   },
@@ -23,7 +23,7 @@ const tiers = [
     name: "Founding Patron",
     amount: "$100",
     icon: Landmark,
-    desc: "Become a founding patron of the 1888 Americano Society. Your generosity helps preserve heritage for future generations.",
+    desc: "Become a founding patron of the 1888 Americano Society. Your generosity helps preserve heritage and honor veterans for future generations.",
     color: "border-terracotta/30 hover:border-terracotta",
     featured: true,
   },
@@ -37,11 +37,11 @@ const tiers = [
 ];
 
 const impactItems = [
-  "Community outreach and education programs",
-  "Cultural preservation of vaquero and cowboy heritage",
-  "4th of July Parade float and participation",
-  "Historical research and story collection",
-  "Events and celebrations that bring the community together",
+  "Heritage education and community outreach programs",
+  "Honoring Mexican-American veterans in Prescott and Yavapai County",
+  "4th of July Parade float and veteran marchers",
+  "Preserving the stories and history of local families",
+  "Events and cultural celebrations that bring the community together",
 ];
 
 export default function Donate() {
@@ -61,48 +61,50 @@ export default function Donate() {
               <span className="text-gold italic">1888 Society</span>
             </h1>
             <p className="font-body text-white/70 text-lg sm:text-xl max-w-2xl mx-auto">
-              Every contribution helps us preserve the heritage and culture
-              that shaped Prescott and the American West.
+              Every contribution helps us honor our heritage, recognize our
+              veterans, and strengthen our community.
             </p>
           </SectionReveal>
         </div>
       </section>
 
-      {/* Supporter Tiers */}
+      {/* Donation Tiers */}
       <section className="py-20 sm:py-28 bg-cream">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionReveal>
             <div className="text-center mb-16">
               <span className="inline-block text-gold font-body text-sm font-semibold tracking-widest uppercase mb-4">
                 Choose Your Level
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal">
-                Supporter{" "}
-                <span className="text-terracotta italic">Tiers</span>
+                Become a{" "}
+                <span className="text-terracotta italic">Supporter</span>
               </h2>
             </div>
           </SectionReveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {tiers.map((tier, i) => (
-              <SectionReveal key={tier.name} delay={i * 100}>
+            {tiers.map((tier) => (
+              <SectionReveal key={tier.name} delay={tier.featured ? 0 : 100}>
                 <div
-                  className={`rounded-2xl p-6 sm:p-8 border-2 ${tier.color} bg-white h-full flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
-                    tier.featured ? "ring-2 ring-gold/30 shadow-md" : ""
-                  }`}
+                  className={`rounded-2xl p-6 border-2 ${tier.color} ${
+                    tier.featured
+                      ? "shadow-xl ring-2 ring-terracotta/20"
+                      : "shadow-sm"
+                  } h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1`}
                 >
                   {tier.featured && (
-                    <span className="inline-block bg-gold/10 text-gold-600 text-xs font-body font-semibold px-3 py-1 rounded-full mb-4 self-start">
+                    <span className="inline-block text-terracotta text-xs font-bold font-body uppercase tracking-widest mb-3">
                       Most Popular
                     </span>
                   )}
                   <div className="w-12 h-12 rounded-xl bg-terracotta/10 flex items-center justify-center mb-4">
                     <tier.icon className="w-6 h-6 text-terracotta" />
                   </div>
-                  <h3 className="font-display text-lg font-bold text-charcoal mb-1">
+                  <h3 className="font-display text-xl font-bold text-charcoal mb-1">
                     {tier.name}
                   </h3>
-                  <p className="font-display text-2xl font-bold text-terracotta mb-4">
+                  <p className="font-display text-2xl font-bold text-terracotta mb-3">
                     {tier.amount}
                   </p>
                   <p className="font-body text-charcoal/60 text-sm leading-relaxed flex-1">
@@ -112,90 +114,61 @@ export default function Donate() {
               </SectionReveal>
             ))}
           </div>
-
-          <SectionReveal delay={500}>
-            <div className="mt-12 text-center">
-              <Button
-                size="lg"
-                className="bg-terracotta hover:bg-terracotta-600 text-white font-body rounded-xl px-10 py-6 text-lg shadow-xl shadow-terracotta/20 transition-all duration-300 hover:-translate-y-1"
-                asChild
-              >
-                <a
-                  href="https://paypal.me"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Become a Founding Supporter
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-              <p className="font-body text-charcoal/40 text-sm mt-4">
-                You'll be redirected to our secure donation platform.
-              </p>
-            </div>
-          </SectionReveal>
         </div>
       </section>
 
       <ScrollDivider />
 
-      {/* Impact Section */}
-      <section className="py-20 sm:py-28 bg-sand/40">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <SectionReveal direction="left">
-              <div>
-                <span className="inline-block text-gold font-body text-sm font-semibold tracking-widest uppercase mb-4">
-                  Where It Goes
-                </span>
-                <h2 className="font-display text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-                  Your Support{" "}
-                  <span className="text-terracotta italic">Makes an Impact</span>
-                </h2>
-                <p className="font-body text-charcoal/70 text-lg leading-relaxed mb-8">
-                  Every dollar donated to the 1888 Americano Society goes
-                  directly toward preserving heritage and strengthening
-                  community.
-                </p>
-                <ul className="space-y-4">
-                  {impactItems.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3"
-                    >
-                      <div className="w-6 h-6 rounded-full bg-terracotta/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 rounded-full bg-terracotta" />
-                      </div>
-                      <span className="font-body text-charcoal/70">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </SectionReveal>
+      {/* Impact */}
+      <section className="py-20 sm:py-28 bg-sand/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionReveal>
+            <div className="text-center mb-12">
+              <span className="inline-block text-gold font-body text-sm font-semibold tracking-widest uppercase mb-4">
+                Your Impact
+              </span>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-charcoal">
+                Where Your{" "}
+                <span className="text-terracotta italic">Donation Goes</span>
+              </h2>
+            </div>
+          </SectionReveal>
 
-            <SectionReveal direction="right">
-              <div className="bg-white rounded-3xl p-8 sm:p-10 border border-gold/15 shadow-sm">
-                <h3 className="font-display text-2xl font-bold text-charcoal mb-4">
-                  Business Sponsorship
-                </h3>
-                <p className="font-body text-charcoal/60 leading-relaxed mb-6">
-                  Local businesses can support the 1888 Americano Society
-                  through parade float sponsorship and other partnership
-                  opportunities.
-                </p>
-                <p className="font-body text-charcoal/60 leading-relaxed mb-6">
-                  Sponsorship provides visibility for your business while
-                  supporting the preservation of Prescott's unique western
-                  heritage.
-                </p>
-                <a href="mailto:info.1888society@gmail.com?subject=Business%20Sponsorship%20Inquiry">
-                  <Button className="bg-gold hover:bg-gold-500 text-charcoal font-body rounded-xl px-6 py-3 transition-all duration-300 hover:-translate-y-0.5">
-                    Inquire About Sponsorship
-                  </Button>
-                </a>
-              </div>
-            </SectionReveal>
-          </div>
+          <SectionReveal delay={100}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {impactItems.map((item) => (
+                <div
+                  key={item}
+                  className="flex items-start gap-3 bg-cream rounded-xl p-4 border border-gold/20"
+                >
+                  <span className="text-terracotta mt-1">★</span>
+                  <span className="font-body text-charcoal/70">{item}</span>
+                </div>
+              ))}
+            </div>
+          </SectionReveal>
+
+          <SectionReveal delay={200}>
+            <div className="mt-12 text-center">
+              <p className="font-body text-charcoal/60 mb-6">
+                All donations support the 1888 Americano Society's mission to
+                honor heritage and recognize service.
+              </p>
+              <a href="mailto:info.1888society@gmail.com?subject=Donation%20Inquiry">
+                <Button
+                  size="lg"
+                  className="bg-terracotta hover:bg-terracotta-600 text-white font-body rounded-xl px-8 py-4 text-lg shadow-xl shadow-terracotta/30 transition-all duration-300 hover:-translate-y-1"
+                >
+                  Donate via Email
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+              <p className="font-body text-charcoal/50 text-sm mt-4">
+                Contact us at info.1888society@gmail.com to arrange your
+                donation.
+              </p>
+            </div>
+          </SectionReveal>
         </div>
       </section>
     </div>

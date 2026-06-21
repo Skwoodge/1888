@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, BookOpen, Landmark, Users } from "lucide-react";
+import { ArrowRight, Shield, BookOpen, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionReveal from "@/components/SectionReveal";
 import ScrollDivider from "@/components/ScrollDivider";
@@ -56,20 +56,22 @@ export default function Index() {
           </h1>
 
           <p
-            className={`font-display italic text-xl sm:text-2xl md:text-3xl text-gold/90 mb-4 transition-all duration-1000 delay-700 ${
+            className={`font-display font-bold italic text-xl sm:text-2xl md:text-3xl text-gold mb-4 transition-all duration-1000 delay-700 ${
               heroRef.isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            Honoring America, Preserving Heritage, Strengthening Community
+            Honoring the Heritage & Service of Mexican Americans in Prescott and the American West
           </p>
 
           <p
-            className={`font-body text-white/70 text-base sm:text-lg max-w-2xl mx-auto mb-10 transition-all duration-1000 delay-900 ${
+            className={`font-body text-white/70 text-base sm:text-lg max-w-2xl mx-auto mb-4 transition-all duration-1000 delay-900 ${
               heroRef.isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            Celebrating the Mexican-American heritage behind the World's Oldest
-            Rodeo and the American West — from Prescott, Arizona.
+            Recognizing, preserving, and celebrating the rich cultural heritage
+            of Prescott, Arizona and the American West — from the vaquero
+            traditions that shaped the cowboy to the veterans who served our
+            country.
           </p>
 
           <div
@@ -77,12 +79,12 @@ export default function Index() {
               heroRef.isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <Link to="/history">
+            <Link to="/heritage">
               <Button
                 size="lg"
                 className="bg-terracotta hover:bg-terracotta-600 text-white font-body rounded-xl px-8 py-6 text-lg shadow-xl shadow-terracotta/30 hover:shadow-terracotta/50 transition-all duration-300 hover:-translate-y-1"
               >
-                Learn More
+                Our Heritage
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -113,16 +115,17 @@ export default function Index() {
                   <span className="text-terracotta italic">Mission</span>
                 </h2>
                 <p className="font-body text-charcoal/70 text-lg leading-relaxed mb-6">
-                  The 1888 Americano Society is a Prescott, Arizona nonprofit
-                  dedicated to honoring and preserving the rich Mexican-American
-                  heritage that shaped the American West. We celebrate the
-                  vaquero traditions, the cowboy culture, and the pioneering
-                  spirit that gave rise to the World's Oldest Rodeo in 1888.
+                  The 1888 Americano Society recognizes, preserves, and
+                  celebrates the rich cultural heritage of Mexican Americans in
+                  Prescott, Arizona and the surrounding communities. From the
+                  vaquero traditions that gave birth to the American cowboy, to
+                  the generations of families who helped shape our region — we
+                  ensure these stories are told, remembered, and honored.
                 </p>
                 <p className="font-body text-charcoal/70 text-lg leading-relaxed">
-                  Through historical education, cultural preservation, and
-                  community fellowship, we ensure these vital stories are never
-                  forgotten — and continue to inspire future generations.
+                  Through heritage education, community celebrations, and the
+                  recognition of those who served our country, we carry this
+                  legacy forward for future generations.
                 </p>
               </div>
             </SectionReveal>
@@ -137,8 +140,8 @@ export default function Index() {
                       1888
                     </span>
                     <p className="font-display italic text-xl text-adobe mt-4 leading-relaxed">
-                      "The year that defined the cowboy, the community, and the
-                      spirit of the American West."
+                      "For all Americans with Mexican heritage — preserving our
+                      past, honoring our heroes, strengthening our community."
                     </p>
                   </div>
                 </div>
@@ -169,20 +172,20 @@ export default function Index() {
             {[
               {
                 icon: BookOpen,
-                title: "Historical Education",
-                desc: "Teaching the true stories of the vaqueros, Mexican-American cowboys, and the communities that built the American West from Prescott, Arizona.",
+                title: "Preserve Heritage",
+                desc: "Safeguarding Prescott's western heritage and the lasting contributions of the Mexican American community to the American West.",
                 delay: 0,
               },
               {
-                icon: Landmark,
-                title: "Cultural Preservation",
-                desc: "Safeguarding the heritage, traditions, and living memory of the cultures that shaped our region — from the 1888 rodeo to the present day.",
+                icon: Shield,
+                title: "Honor Veterans",
+                desc: "Recognizing the service and sacrifice of Mexican American veterans, the vaquero tradition, and the early Prescott families who built our community.",
                 delay: 150,
               },
               {
                 icon: Users,
-                title: "Community Fellowship",
-                desc: "Bringing people together through events, parades, and celebrations that strengthen bonds and honor shared history.",
+                title: "Community Engagement",
+                desc: "Promoting Prescott Frontier Days Parade awareness, cultural celebrations, and fellowship that brings our community together.",
                 delay: 300,
               },
             ].map((pillar) => (
@@ -224,16 +227,10 @@ export default function Index() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                to: "/history",
-                title: "Our History",
-                desc: "From the World's Oldest Rodeo to vaquero traditions — the full story of Prescott's western heritage.",
+                to: "/heritage",
+                title: "Our Heritage",
+                desc: "From vaquero traditions to the World's Oldest Rodeo — the full story of Prescott's Mexican American heritage.",
                 gradient: "from-terracotta to-terracotta-700",
-              },
-              {
-                to: "/juan-leivas",
-                title: "Juan Leivas",
-                desc: "Meet the first champion of the World's Oldest Rodeo — a Mexican-American cowboy whose legacy endures.",
-                gradient: "from-adobe to-adobe-light",
               },
               {
                 to: "/events",
@@ -244,8 +241,14 @@ export default function Index() {
               {
                 to: "/get-involved",
                 title: "Get Involved",
-                desc: "Volunteer, attend meetings, and help us preserve the heritage of the American West.",
+                desc: "Volunteer, march with us, and help preserve the heritage of the American West.",
                 gradient: "from-sage-dark to-sage",
+              },
+              {
+                to: "/donate",
+                title: "Support Us",
+                desc: "Every contribution helps us honor our heritage and recognize those who served.",
+                gradient: "from-adobe to-adobe-light",
               },
             ].map((card) => (
               <SectionReveal key={card.to} delay={0}>
@@ -276,31 +279,38 @@ export default function Index() {
 
       <ScrollDivider />
 
-      {/* ============ AMERICA 250 ============ */}
+      {/* ============ AMERICA 250 / PARADE ============ */}
       <section className="py-20 sm:py-28 bg-charcoal relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-terracotta/20 via-transparent to-gold/10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionReveal>
             <div className="text-center">
               <span className="inline-block text-gold font-body text-sm font-semibold tracking-widest uppercase mb-4">
-                Special Event
+                4th of July Parade 2026
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
                 Celebrating America's{" "}
                 <span className="text-gold italic">250th Anniversary</span>
               </h2>
-              <p className="font-body text-white/60 text-lg max-w-3xl mx-auto mb-8 leading-relaxed">
-                The 1888 Americano Society proudly makes its debut in the 4th of
-                July Parade — celebrating America's 250th birthday with a
-                spectacular float honoring Prescott's western heritage.
+              <p className="font-body text-white/60 text-lg max-w-3xl mx-auto mb-4 leading-relaxed">
+                This year, the 1888 Americano Society makes its debut in the
+                Prescott 4th of July Parade — honoring the Mexican Americans
+                of Yavapai County who served our country. We are highlighting
+                the veterans and service men and women with Mexican heritage
+                who proudly represented our community.
+              </p>
+              <p className="font-body text-white/80 text-lg max-w-3xl mx-auto mb-8 leading-relaxed font-semibold">
+                We are looking for service men and women with Mexican heritage
+                to march in the parade. If you are a veteran or family member
+                of a veteran from Yavapai County, we want to honor you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/events">
+                <Link to="/get-involved">
                   <Button
                     size="lg"
                     className="bg-gold hover:bg-gold-500 text-charcoal font-body rounded-xl px-8 py-6 text-lg shadow-xl shadow-gold/20 transition-all duration-300 hover:-translate-y-1"
                   >
-                    View Event Details
+                    Volunteer Now
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
@@ -310,7 +320,7 @@ export default function Index() {
                     variant="outline"
                     className="border-2 border-white/30 text-white hover:bg-white/10 font-body rounded-xl px-8 py-6 text-lg transition-all duration-300 hover:-translate-y-1"
                   >
-                    Float Sponsorship
+                    Sponsorship
                   </Button>
                 </Link>
               </div>
@@ -327,26 +337,26 @@ export default function Index() {
               Be Part of the <span className="text-terracotta italic">Legacy</span>
             </h2>
             <p className="font-body text-charcoal/60 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-              Whether you volunteer, donate, or simply share our story — you
-              become part of preserving the heritage that shaped the American
-              West.
+              Whether you march with us, volunteer, donate, or simply share
+              our story — you become part of preserving the heritage and
+              honoring the service of Mexican Americans in our community.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/donate">
+              <Link to="/get-involved">
                 <Button
                   size="lg"
-                  className="bg-terracotta hover:bg-terracotta-600 text-white font-body rounded-xl px-8 py-6 text-lg shadow-xl shadow-terracotta/30 transition-all duration-300 hover:-translate-y-1"
+                  className="bg-terracotta hover:bg-terracotta-600 text-white font-body rounded-xl px-8 py-6 text-lg shadow-xl shadow-terracotta/30 hover:shadow-terracotta/50 transition-all duration-300 hover:-translate-y-1"
                 >
-                  Donate Now
+                  Join Us
                 </Button>
               </Link>
-              <Link to="/get-involved">
+              <Link to="/donate">
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-2 border-terracotta/30 text-terracotta hover:bg-terracotta hover:text-white font-body rounded-xl px-8 py-6 text-lg transition-all duration-300 hover:-translate-y-1"
                 >
-                  Join Us
+                  Donate Now
                 </Button>
               </Link>
             </div>

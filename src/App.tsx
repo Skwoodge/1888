@@ -7,8 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
-import History from "./pages/History";
-import JuanLeivas from "./pages/JuanLeivas";
+import Heritage from "./pages/Heritage";
 import Events from "./pages/Events";
 import GetInvolved from "./pages/GetInvolved";
 import Donate from "./pages/Donate";
@@ -29,8 +28,9 @@ const App = () => (
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/history" element={<History />} />
-              <Route path="/juan-leivas" element={<JuanLeivas />} />
+              <Route path="/heritage" element={<Heritage />} />
+              <Route path="/history" element={<Heritage />} />
+              <Route path="/juan-leivas" element={<Heritage />} />
               <Route path="/events" element={<Events />} />
               <Route path="/get-involved" element={<GetInvolved />} />
               <Route path="/donate" element={<Donate />} />
