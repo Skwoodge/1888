@@ -29,12 +29,6 @@ const upcomingEvents = [
     desc: "The 1888 Americano Society's debut in the Independence Day parade — honoring Mexican-American veterans and celebrating America's 250th birthday.",
     featured: true,
   },
-  {
-    name: "Society Meeting",
-    date: "Check back for updated times",
-    location: "Prescott, AZ",
-    desc: "Join us for our regular community meetings to discuss upcoming events and heritage initiatives.",
-  },
 ];
 
 export default function Events() {
