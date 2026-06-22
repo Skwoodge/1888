@@ -87,24 +87,25 @@ export default function GetInvolved() {
                 <AlertTriangle className="w-8 h-8 text-terracotta shrink-0 mt-1" />
                 <div>
                   <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-2">
-                    4th of July Parade — We Need Marchers
+                    All Veterans Welcome to March With Us
                   </h2>
                   <p className="font-body text-white/70 text-lg leading-relaxed">
-                    We are looking for <strong className="text-gold">service men and women
-                    with Mexican heritage</strong> to march in the 4th of July Parade.
-                    If you are a veteran or a family member representing a veteran
-                    from Yavapai County, we want to honor you.
+                    We are honoring the <strong className="text-gold">Mexican American heritage
+                    of Prescott</strong> and the veterans who served our country.
+                    All veterans — regardless of background — are invited to
+                    march alongside us as we celebrate the contributions of
+                    Mexican Americans to our community and our nation.
                   </p>
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ml-12">
                 <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                  <p className="font-body text-white/80 font-semibold mb-1">10–12 Veterans</p>
-                  <p className="font-body text-white/50 text-sm">Or one family member to represent each veteran</p>
+                  <p className="font-body text-white/80 font-semibold mb-1">All Veterans Welcome</p>
+                  <p className="font-body text-white/50 text-sm">March alongside us to honor Mexican American heritage</p>
                 </div>
                 <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                  <p className="font-body text-white/80 font-semibold mb-1">15 Service Members</p>
-                  <p className="font-body text-white/50 text-sm">In uniform or wearing a shirt with name + branch</p>
+                  <p className="font-body text-white/80 font-semibold mb-1">Family Members Welcome</p>
+                  <p className="font-body text-white/50 text-sm">Represent a veteran who can't be there in person</p>
                 </div>
                 <div className="bg-white/5 rounded-xl p-4 border border-white/10">
                   <p className="font-body text-white/80 font-semibold mb-1">10×25 ft Arizona Flag</p>
