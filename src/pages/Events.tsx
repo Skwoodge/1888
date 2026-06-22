@@ -264,32 +264,87 @@ export default function Events() {
           </SectionReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {sponsorshipTiers.map((tier) => (
-              <SectionReveal key={tier.name} delay={tier.featured ? 0 : 150}>
-                <div
-                  className={`rounded-2xl p-8 border-2 ${tier.color} ${
-                    tier.featured
-                      ? "shadow-xl ring-2 ring-gold/30"
-                      : "shadow-sm"
-                  } h-full flex flex-col`}
-                >
-                  {tier.featured && (
-                    <span className="inline-flex items-center gap-1 text-gold text-xs font-bold font-body uppercase tracking-widest mb-4">
-                      <Star className="w-4 h-4" /> Most Popular
-                    </span>
-                  )}
-                  <h3 className="font-display text-2xl font-bold text-charcoal mb-2">
-                    {tier.name}
-                  </h3>
-                  <p className="font-display text-3xl font-bold text-terracotta mb-4">
-                    {tier.amount}
-                  </p>
-                  <p className="font-body text-charcoal/60 leading-relaxed flex-1">
-                    {tier.desc}
-                  </p>
+            {/* Platinum Sponsor */}
+            <SectionReveal delay={0}>
+              <div className="relative rounded-3xl overflow-hidden group card-hover">
+                {/* Animated gold border */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-gold via-terracotta to-gold p-[2px]">
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-gold/50 via-gold to-gold/50 animate-pulse" />
                 </div>
-              </SectionReveal>
-            ))}
+                {/* Card content */}
+                <div className="relative bg-cream rounded-3xl p-8 sm:p-10 h-full flex flex-col">
+                  {/* Premium badge */}
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-terracotta flex items-center justify-center shadow-lg">
+                      <Star className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gold text-xs font-bold font-body uppercase tracking-widest">
+                      Premier Sponsor
+                    </span>
+                  </div>
+                  <h3 className="font-display text-3xl font-bold text-charcoal mb-2">
+                    Platinum
+                  </h3>
+                  <p className="font-display text-5xl font-bold text-terracotta mb-6">
+                    $1,500
+                  </p>
+                  <div className="space-y-3 flex-1">
+                    <div className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 shrink-0" />
+                      <p className="font-body text-charcoal/70">Banner on the parade float</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 shrink-0" />
+                      <p className="font-body text-charcoal/70">Logo on our website with a link to your business</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 shrink-0" />
+                      <p className="font-body text-charcoal/70 font-semibold">Link active for one full year</p>
+                    </div>
+                  </div>
+                  {/* Decorative corner accent */}
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-gold/10 to-transparent rounded-bl-3xl" />
+                </div>
+              </div>
+            </SectionReveal>
+
+            {/* Gold Sponsor */}
+            <SectionReveal delay={150}>
+              <div className="relative rounded-3xl overflow-hidden group card-hover">
+                {/* Gold border */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-gold/40 via-gold/20 to-gold/40 p-[2px]">
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-gold/30 via-gold/10 to-gold/30" />
+                </div>
+                {/* Card content */}
+                <div className="relative bg-cream rounded-3xl p-8 sm:p-10 h-full flex flex-col">
+                  {/* Badge */}
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold/80 to-gold flex items-center justify-center">
+                      <Star className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gold/80 text-xs font-bold font-body uppercase tracking-widest">
+                      Supporting Sponsor
+                    </span>
+                  </div>
+                  <h3 className="font-display text-3xl font-bold text-charcoal mb-2">
+                    Gold
+                  </h3>
+                  <p className="font-display text-5xl font-bold text-terracotta mb-6">
+                    $1,000
+                  </p>
+                  <div className="space-y-3 flex-1">
+                    <div className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
+                      <p className="font-body text-charcoal/70">Banner displayed on the parade float</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
+                      <p className="font-body text-charcoal/70">Your business recognized as a community supporter</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SectionReveal>
           </div>
 
           <SectionReveal delay={300}>
