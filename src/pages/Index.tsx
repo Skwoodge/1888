@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, BookOpen, Users } from "lucide-react";
+import Counter from "@/components/Counter";
 import { Button } from "@/components/ui/button";
 import SectionReveal from "@/components/SectionReveal";
 import ScrollDivider from "@/components/ScrollDivider";
@@ -102,7 +103,7 @@ export default function Index() {
       </section>
 
       {/* ============ MISSION ============ */}
-      <section className="py-20 sm:py-28 bg-cream">
+      <section className="py-20 sm:py-28 bg-cream texture-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <SectionReveal direction="left">
@@ -190,7 +191,7 @@ export default function Index() {
               },
             ].map((pillar) => (
               <SectionReveal key={pillar.title} delay={pillar.delay}>
-                <div className="bg-cream rounded-2xl p-8 border border-gold/20 shadow-sm hover:shadow-lg hover:border-gold/40 transition-all duration-300 hover:-translate-y-1 h-full group">
+                <div className="bg-cream rounded-2xl p-8 border border-gold/20 shadow-sm card-hover h-full group">
                   <div className="w-14 h-14 rounded-xl bg-terracotta/10 flex items-center justify-center mb-5 group-hover:bg-terracotta group-hover:scale-110 transition-all duration-300">
                     <pillar.icon className="w-7 h-7 text-terracotta group-hover:text-white transition-colors duration-300" />
                   </div>
@@ -207,10 +208,43 @@ export default function Index() {
         </div>
       </section>
 
+      {/* ============ COUNTERS ============ */}
+      <section className="py-16 bg-charcoal relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-terracotta/10 via-transparent to-gold/5" />
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <p className="font-display text-4xl sm:text-5xl font-bold text-gold mb-2">
+                <Counter end={1888} />
+              </p>
+              <p className="font-body text-white/50 text-sm uppercase tracking-wider">Established</p>
+            </div>
+            <div>
+              <p className="font-display text-4xl sm:text-5xl font-bold text-gold mb-2">
+                <Counter end={135} suffix="+" />
+              </p>
+              <p className="font-body text-white/50 text-sm uppercase tracking-wider">Years of Heritage</p>
+            </div>
+            <div>
+              <p className="font-display text-4xl sm:text-5xl font-bold text-gold mb-2">
+                <Counter end={250} />
+              </p>
+              <p className="font-body text-white/50 text-sm uppercase tracking-wider">America's Anniversary</p>
+            </div>
+            <div>
+              <p className="font-display text-4xl sm:text-5xl font-bold text-gold mb-2">
+                <Counter end={1} />
+              </p>
+              <p className="font-body text-white/50 text-sm uppercase tracking-wider">Community United</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <ScrollDivider />
 
       {/* ============ EXPLORE ============ */}
-      <section className="py-20 sm:py-28 bg-cream">
+      <section className="py-20 sm:py-28 bg-cream texture-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionReveal>
             <div className="text-center mb-16">

@@ -3,8 +3,20 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1E1E1E] text-white pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#1E1E1E] text-white">
+      {/* Dramatic Quote Section */}
+      <div className="border-b border-white/5">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <p className="font-display italic text-2xl sm:text-3xl md:text-4xl text-white/80 leading-relaxed">
+            "For all Americans with Mexican heritage — preserving our past,
+            <span className="text-[#D4A853]"> honoring our heroes</span>,
+            strengthening our community."
+          </p>
+        </div>
+      </div>
+
+      {/* Main Footer */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
@@ -96,10 +108,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 text-center">
+        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-sm">
-            &copy; {new Date().getFullYear()} 1888 Americano Society. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} 1888 Americano Society. All rights reserved.
+          </p>
+          <p className="text-white/30 text-xs italic font-display">
+            Est. 1888 — Prescott, Arizona
           </p>
         </div>
       </div>
