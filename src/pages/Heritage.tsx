@@ -8,7 +8,7 @@ const timeline = [
   {
     year: "1888",
     title: "The First Rodeo",
-    desc: "The World's Oldest Rodeo kicks off in Prescott, Arizona Territory. Juan Leivas, a Mexican-American cowboy, ties Charlie Meadows for the bronco-riding championship and wins the steer-roping event outright with a time of 1 minute and 17 seconds.",
+    desc: "The World's Oldest Rodeo kicks off in Prescott, Arizona Territory. Juan Leivas, a cowboy with Mexican heritage, ties Charlie Meadows for the bronco-riding championship and wins the steer-roping event outright with a time of 1 minute and 17 seconds.",
   },
   {
     year: "1889",
@@ -23,7 +23,7 @@ const timeline = [
   {
     year: "20th Century",
     title: "Generations of Service",
-    desc: "Mexican-American families from Prescott and Yavapai County serve in every major conflict — World War I, World War II, Korea, Vietnam, and beyond — carrying the values of their heritage into uniform.",
+    desc: "Families with Mexican heritage from Prescott and Yavapai County served in every major conflict — World War I, World War II, Korea, Vietnam, and beyond — carrying the values of their heritage into uniform.",
   },
   {
     year: "1988",
@@ -33,7 +33,7 @@ const timeline = [
   {
     year: "Today",
     title: "1888 Americano Society",
-    desc: "The 1888 Americano Society carries the torch — preserving heritage, honoring veterans, and celebrating the Mexican-American contributions that shaped our community.",
+    desc: "The 1888 Americano Society carries the torch — preserving heritage, honoring veterans, and celebrating the contributions from Americans with Mexican heritage that shaped our community.",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Heritage() {
             </h1>
             <p className="font-body text-white/70 text-lg sm:text-xl max-w-2xl mx-auto">
               From the vaquero traditions that created the American cowboy, to the
-              veterans who served our country — the story of Mexican Americans in
+              veterans who served our country — the story of Americans with Mexican heritage in
               Prescott and the American West.
             </p>
           </SectionReveal>
@@ -125,7 +125,7 @@ export default function Heritage() {
                 <li>
                   <strong className="text-charcoal">Community continuity</strong> — Prescott's
                   residents have maintained and celebrated the event for over
-                  135 years.
+                  138 years.
                 </li>
                 <li>
                   <strong className="text-charcoal">Cultural significance</strong> — The rodeo
@@ -166,8 +166,7 @@ export default function Heritage() {
               <p>
                 In Prescott, Arizona, this heritage runs particularly deep. The
                 town was founded in 1864 as the first capital of the Arizona
-                Territory, and from its earliest days, Mexican and
-                Mexican-American cowboys were central to the community's
+                Territory, and from its earliest days, cowboys with Mexican heritage were central to the community's
                 identity and economy.
               </p>
             </div>
@@ -223,7 +222,7 @@ export default function Heritage() {
                 <div className="space-y-5 font-body text-charcoal/70 text-lg leading-relaxed">
                   <p>
                     In 1888, at the very first rodeo in Prescott, Arizona
-                    Territory, a Mexican-American cowboy named Juan Leivas made
+                    Territory, a cowboy named Juan Leivas with Mexican heritage made
                     history. From Date Creek Ranch, southwest of Prescott,
                     Leivas rode into the arena and rode out a legend.
                   </p>
@@ -333,7 +332,7 @@ export default function Heritage() {
                     descendants and through the 1888 Americano Society's
                     efforts to preserve this history. His story reminds us
                     that the World's Oldest Rodeo was born from the skill and
-                    courage of Mexican-American cowboys — and that this
+                    courage of cowboys with Mexican heritage — and that this
                     heritage deserves to be honored, remembered, and
                     celebrated.
                   </p>
@@ -362,7 +361,7 @@ export default function Heritage() {
               <p className="font-body text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
                 The same families who built Prescott's western heritage have
                 served our country in every generation. From World War I to
-                today, Mexican Americans from Yavapai County have answered the
+                today, Americans with Mexican heritage from Yavapai County have answered the
                 call — and the 1888 Americano Society is committed to honoring
                 their sacrifice.
               </p>
@@ -372,8 +371,8 @@ export default function Heritage() {
           <SectionReveal delay={150}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { era: "World War I", desc: "Mexican Americans from Prescott and Yavapai County served overseas, fighting for a country that didn't always recognize their contributions." },
-                { era: "World War II", desc: "Hundreds of Mexican Americans from the region served in every theater of the war, earning medals and honors while maintaining the values of their heritage." },
+                { era: "World War I", desc: "Americans with Mexican heritage from Prescott and Yavapai County served overseas, fighting for a country that didn't always recognize their contributions." },
+                { era: "World War II", desc: "Hundreds of Americans with Mexican heritage from the region served in every theater of the war, earning medals and honors while maintaining the values of their heritage." },
                 { era: "Korea & Vietnam", desc: "Generations continued to serve. Families like the Espitias and Gallegos sent sons and grandsons to defend the freedoms they held dear." },
                 { era: "Today", desc: "The 1888 Americano Society ensures these stories are never forgotten — honoring veterans and preserving the legacy of service in our community." },
               ].map((item) => (

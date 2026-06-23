@@ -8,14 +8,14 @@ const tiers = [
     name: "Heritage Supporter",
     amount: "$25",
     icon: Heart,
-    desc: "Help us share the stories of the vaqueros, Mexican-American veterans, and families who shaped our community.",
+    desc: "Help us share the stories of the vaqueros, veterans with Mexican heritage, and families who shaped our community.",
     color: "border-sage/30 hover:border-sage",
   },
   {
     name: "Community Supporter",
     amount: "$50",
     icon: BookOpen,
-    desc: "Support heritage education programs that teach the true history of Mexican Americans in Prescott and the American West.",
+    desc: "Support heritage education programs that teach the true history of Americans with Mexican heritage in Prescott and the American West.",
     color: "border-gold/30 hover:border-gold",
     featured: false,
   },
@@ -38,7 +38,7 @@ const tiers = [
 
 const impactItems = [
   "Heritage education and community outreach programs",
-  "Honoring Mexican-American veterans in Prescott and Yavapai County",
+  "Honoring veterans with Mexican heritage in Prescott and Yavapai County",
   "4th of July Parade float and veteran marchers",
   "Preserving the stories and history of local families",
   "Events and cultural celebrations that bring the community together",

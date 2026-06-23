@@ -26,7 +26,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed italic mb-4">
-              Honoring the Heritage & Service of Mexican Americans in Prescott and the American West.
+              Honoring the Heritage & Service of Americans with Mexican Heritage in Prescott and the American West.
             </p>
           </div>
 
@@ -92,7 +92,7 @@ const Footer = () => {
               Connect With Us
             </h4>
             <p className="text-white/60 text-sm mb-4">
-              Join us in honoring the heritage and service of Mexican Americans
+              Join us in honoring the heritage and service of Americans with Mexican heritage
               in Prescott and beyond.
             </p>
             <div className="flex space-x-4">

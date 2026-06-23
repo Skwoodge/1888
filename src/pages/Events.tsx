@@ -15,7 +15,7 @@ const sponsorshipTiers = [
   {
     name: "Gold Sponsor",
     amount: "$1,000",
-    desc: "Banner on the float displaying your business. A visible show of community pride and support for Prescott's Mexican-American heritage.",
+    desc: "Banner on the float displaying your business. A visible show of community pride and support for Prescott's Mexican heritage.",
     color: "bg-terracotta/10 border-terracotta/30",
     featured: false,
   },
@@ -26,7 +26,7 @@ const upcomingEvents = [
     name: "4th of July Parade",
     date: "July 4, 2026",
     location: "Downtown Prescott",
-    desc: "The 1888 Americano Society's debut in the Independence Day parade — honoring Mexican-American veterans and celebrating America's 250th birthday.",
+    desc: "The 1888 Americano Society's debut in the Independence Day parade — honoring veterans with Mexican heritage and celebrating America's 250th birthday.",
     featured: true,
   },
 ];
@@ -73,7 +73,7 @@ export default function Events() {
                 <p className="font-body text-white/60 text-lg max-w-3xl mb-6 leading-relaxed">
                   This year's parade celebrates America's 250th Anniversary. The
                   1888 Americano Society is making its debut — honoring the
-                  Mexican Americans of Yavapai County who served our country.
+                  Americans with Mexican heritage from Yavapai County who served our country.
                   We are looking for service men and women with Mexican heritage
                   to march in the parade.
                 </p>

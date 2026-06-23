@@ -61,7 +61,7 @@ export default function Index() {
               heroRef.isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            Honoring the Heritage & Service of Mexican Americans in Prescott and the American West
+            Honoring the Heritage & Service of Americans with Mexican Heritage in Prescott and the American West
           </p>
 
           <p
@@ -117,7 +117,7 @@ export default function Index() {
                 </h2>
                 <p className="font-body text-charcoal/70 text-lg leading-relaxed mb-6">
                   The 1888 Americano Society recognizes, preserves, and
-                  celebrates the rich cultural heritage of Mexican Americans in
+                  celebrates the rich cultural heritage of Americans with Mexican heritage in
                   Prescott, Arizona and the surrounding communities. From the
                   vaquero traditions that gave birth to the American cowboy, to
                   the generations of families who helped shape our region — we
@@ -174,13 +174,13 @@ export default function Index() {
               {
                 icon: BookOpen,
                 title: "Preserve Heritage",
-                desc: "Safeguarding Prescott's western heritage and the lasting contributions of the Mexican American community to the American West.",
+                desc: "Safeguarding Prescott's western heritage and the lasting contributions of Americans with Mexican heritage to the American West.",
                 delay: 0,
               },
               {
                 icon: Shield,
                 title: "Honor Veterans",
-                desc: "Recognizing the service and sacrifice of Mexican American veterans, the vaquero tradition, and the early Prescott families who built our community.",
+                desc: "Recognizing the service and sacrifice of veterans with Mexican heritage, the vaquero tradition, and the early Prescott families who built our community.",
                 delay: 150,
               },
               {
@@ -221,7 +221,7 @@ export default function Index() {
             </div>
             <div>
               <p className="font-display text-4xl sm:text-5xl font-bold text-gold mb-2">
-                <Counter end={135} suffix="+" />
+                <Counter end={138} suffix="+" />
               </p>
               <p className="font-body text-white/50 text-sm uppercase tracking-wider">Years of Heritage</p>
             </div>
@@ -263,7 +263,7 @@ export default function Index() {
               {
                 to: "/heritage",
                 title: "Our Heritage",
-                desc: "From vaquero traditions to the World's Oldest Rodeo — the full story of Prescott's Mexican American heritage.",
+                desc: "From vaquero traditions to the World's Oldest Rodeo — the full story of Prescott's Mexican heritage.",
                 gradient: "from-terracotta to-terracotta-700",
               },
               {
@@ -328,8 +328,8 @@ export default function Index() {
               </h2>
               <p className="font-body text-white/60 text-lg max-w-3xl mx-auto mb-4 leading-relaxed">
                 This year, the 1888 Americano Society makes its debut in the
-                Prescott 4th of July Parade — honoring the Mexican Americans
-                of Yavapai County who served our country. We are highlighting
+                Prescott 4th of July Parade — honoring Americans with Mexican heritage from
+                  Yavapai County who served our country.We are highlighting
                 the veterans and service men and women with Mexican heritage
                 who proudly represented our community.
               </p>
@@ -373,7 +373,7 @@ export default function Index() {
             <p className="font-body text-charcoal/60 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
               Whether you march with us, volunteer, donate, or simply share
               our story — you become part of preserving the heritage and
-              honoring the service of Mexican Americans in our community.
+              honoring the service of Americans with Mexican heritage in our community.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/get-involved">

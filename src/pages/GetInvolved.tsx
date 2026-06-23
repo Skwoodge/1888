@@ -90,18 +90,18 @@ export default function GetInvolved() {
                     All Veterans Welcome to March With Us
                   </h2>
                   <p className="font-body text-white/70 text-lg leading-relaxed">
-                    We are honoring the <strong className="text-gold">Mexican American heritage
+                    We are honoring the <strong className="text-gold">Mexican heritage
                     of Prescott</strong> and the veterans who served our country.
                     All veterans — regardless of background — are invited to
                     march alongside us as we celebrate the contributions of
-                    Mexican Americans to our community and our nation.
+                    Americans with Mexican heritage to our community and our nation.
                   </p>
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ml-12">
                 <div className="bg-white/5 rounded-xl p-4 border border-white/10">
                   <p className="font-body text-white/80 font-semibold mb-1">All Veterans Welcome</p>
-                  <p className="font-body text-white/50 text-sm">March alongside us to honor Mexican American heritage</p>
+                  <p className="font-body text-white/50 text-sm">March alongside us to honor Mexican heritage</p>
                 </div>
                 <div className="bg-white/5 rounded-xl p-4 border border-white/10">
                   <p className="font-body text-white/80 font-semibold mb-1">Family Members Welcome</p>
@@ -284,7 +284,7 @@ export default function GetInvolved() {
                   </h3>
                   <p className="font-body text-charcoal/60 leading-relaxed italic">
                     "The 1888 Americano Society recognizes, preserves, and
-                    celebrates the rich cultural heritage of Mexican Americans
+                    celebrates the rich cultural heritage of Americans with Mexican heritage
                     in Prescott, Arizona and the surrounding communities —
                     through heritage education, community celebrations, and
                     the recognition of those who served our country."
