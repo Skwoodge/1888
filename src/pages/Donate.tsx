@@ -78,7 +78,7 @@ export default function Donate() {
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal">
                 Become a{" "}
-                <span className="text-terracotta italic">Supporter</span>
+                <span className="text-gradient italic">Supporter</span>
               </h2>
             </div>
           </SectionReveal>
@@ -129,7 +129,7 @@ export default function Donate() {
               </span>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-charcoal">
                 Where Your{" "}
-                <span className="text-terracotta italic">Donation Goes</span>
+                <span className="text-gradient italic">Donation Goes</span>
               </h2>
             </div>
           </SectionReveal>

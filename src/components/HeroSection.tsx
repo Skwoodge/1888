@@ -1,4 +1,5 @@
 import { useScrollPosition } from "@/hooks/useScrollReveal";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 
 interface HeroSectionProps {
@@ -23,6 +24,7 @@ export default function HeroSection({
   small = false,
 }: HeroSectionProps) {
   const scrollY = useScrollPosition();
+  const isMobile = useIsMobile();
 
   return (
     <section
@@ -36,7 +38,7 @@ export default function HeroSection({
       {bgImage && (
         <div
           className="absolute inset-0 z-0"
-          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+          style={{ transform: isMobile ? "none" : `translateY(${scrollY * 0.3}px)` }}
         >
           <div
             className="absolute inset-[-20%] bg-cover bg-center"

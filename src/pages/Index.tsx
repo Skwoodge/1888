@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button";
 import SectionReveal from "@/components/SectionReveal";
 import ScrollDivider from "@/components/ScrollDivider";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function Index() {
   const heroRef = useScrollReveal({ threshold: 0.05, rootMargin: "0px" });
+  const isMobile = useIsMobile();
 
   return (
     <div className="min-h-screen">
@@ -21,8 +23,8 @@ export default function Index() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
             style={{
-              backgroundImage: "url(/assets/hero-bg.png)",
-              transform: `translateY(${heroRef.isRevealed ? "0%" : "5%"}) scale(1.05)`,
+              backgroundImage: "url(/assets/hero-bg.webp)",
+              transform: isMobile ? "scale(1.05)" : `translateY(${heroRef.isRevealed ? "0%" : "5%"}) scale(1.05)`,
               transition: "transform 1.5s ease-out",
             }}
           />
@@ -113,7 +115,7 @@ export default function Index() {
                 </span>
                 <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal mb-6 leading-tight">
                   Our{" "}
-                  <span className="text-terracotta italic">Mission</span>
+                  <span className="text-gradient italic">Mission</span>
                 </h2>
                 <p className="font-body text-charcoal/70 text-lg leading-relaxed mb-6">
                   The 1888 Americano Society recognizes, preserves, and
@@ -164,7 +166,7 @@ export default function Index() {
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal">
                 Three Pillars of{" "}
-                <span className="text-terracotta italic">Purpose</span>
+                <span className="text-gradient italic">Purpose</span>
               </h2>
             </div>
           </SectionReveal>
@@ -253,7 +255,7 @@ export default function Index() {
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal">
                 Discover Our{" "}
-                <span className="text-terracotta italic">Story</span>
+                <span className="text-gradient italic">Story</span>
               </h2>
             </div>
           </SectionReveal>
@@ -368,7 +370,7 @@ export default function Index() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SectionReveal>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal mb-6">
-              Be Part of the <span className="text-terracotta italic">Legacy</span>
+              Be Part of the <span className="text-gradient italic">Legacy</span>
             </h2>
             <p className="font-body text-charcoal/60 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
               Whether you march with us, volunteer, donate, or simply share

@@ -104,7 +104,7 @@ export default function Events() {
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal">
                 Parade Day{" "}
-                <span className="text-terracotta italic">Information</span>
+                <span className="text-gradient italic">Information</span>
               </h2>
             </div>
           </SectionReveal>
@@ -151,6 +151,7 @@ export default function Events() {
                     <img
                       src="/assets/staging_info.png"
                       alt="Staging Area 6 map showing 1888 Americano Society entry positions"
+                      loading="lazy"
                       className="w-full rounded-xl border border-gold/10"
                     />
                   </div>
@@ -253,7 +254,7 @@ export default function Events() {
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal mb-4">
                 Float{" "}
-                <span className="text-terracotta italic">Sponsorship</span>
+                <span className="text-gradient italic">Sponsorship</span>
               </h2>
               <p className="font-body text-charcoal/60 text-lg max-w-2xl mx-auto">
                 Support the 1888 Americano Society's debut in the 4th of July
@@ -378,7 +379,7 @@ export default function Events() {
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal">
                 Upcoming{" "}
-                <span className="text-terracotta italic">Events</span>
+                <span className="text-gradient italic">Events</span>
               </h2>
             </div>
           </SectionReveal>

@@ -146,7 +146,7 @@ export default function GetInvolved() {
                 </span>
                 <h2 className="font-display text-3xl sm:text-4xl font-bold text-charcoal mb-6">
                   Join the{" "}
-                  <span className="text-terracotta italic">Society</span>
+                  <span className="text-gradient italic">Society</span>
                 </h2>
                 <p className="font-body text-charcoal/60 mb-8">
                   Fill out the form below and we'll be in touch. Whether you

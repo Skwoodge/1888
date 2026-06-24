@@ -67,7 +67,7 @@ export default function Heritage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionReveal>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-charcoal mb-8">
-              The World's <span className="text-terracotta italic">Oldest Rodeo</span>
+              The World's <span className="text-gradient italic">Oldest Rodeo</span>
             </h2>
             <div className="space-y-6 font-body text-charcoal/70 text-lg leading-relaxed">
               <p>
@@ -145,7 +145,7 @@ export default function Heritage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionReveal>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-charcoal mb-8">
-              The <span className="text-terracotta italic">Vaquero</span> Tradition
+              The <span className="text-gradient italic">Vaquero</span> Tradition
             </h2>
             <div className="space-y-6 font-body text-charcoal/70 text-lg leading-relaxed">
               <p>
@@ -195,8 +195,9 @@ export default function Heritage() {
               <div className="sticky top-28">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-gold/30">
                   <img
-                    src="/juan-leivas.png"
+                    src="/juan-leivas.webp"
                     alt="Juan Leivas — First Champion of the World's Oldest Rodeo"
+                    loading="lazy"
                     className="w-full aspect-[3/4] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-transparent" />
@@ -217,7 +218,7 @@ export default function Heritage() {
                 </span>
                 <h2 className="font-display text-3xl sm:text-4xl font-bold text-charcoal mb-6">
                   Juan{" "}
-                  <span className="text-terracotta italic">Leivas</span>
+                  <span className="text-gradient italic">Leivas</span>
                 </h2>
                 <div className="space-y-5 font-body text-charcoal/70 text-lg leading-relaxed">
                   <p>
@@ -397,7 +398,7 @@ export default function Heritage() {
                 Through the Years
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal">
-                A Living <span className="text-terracotta italic">Timeline</span>
+                A Living <span className="text-gradient italic">Timeline</span>
               </h2>
             </div>
           </SectionReveal>
