@@ -363,37 +363,6 @@ export default function Events() {
               </Link>
             </div>
           </SectionReveal>
-
-          {/* Our Sponsors */}
-          <SectionReveal delay={400}>
-            <div className="mt-16 text-center">
-              <span className="inline-block text-gold font-body text-sm font-semibold tracking-widest uppercase mb-4">
-                With Gratitude
-              </span>
-              <h3 className="font-display text-2xl sm:text-3xl font-bold text-charcoal mb-8">
-                Our <span className="text-gradient italic">Sponsors</span>
-              </h3>
-              <div className="flex flex-wrap justify-center gap-8">
-                <a
-                  href="https://el-charro-norte.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block"
-                >
-                  <div className="bg-cream rounded-2xl border border-gold/20 p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-gold/40 w-64">
-                    <img
-                      src="/el_charro_norte_logo.png"
-                      alt="El Charro Norte"
-                      className="w-full h-auto max-h-32 object-contain mb-4 transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <p className="font-display text-lg font-bold text-charcoal group-hover:text-terracotta transition-colors">
-                      El Charro Norte
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </SectionReveal>
         </div>
       </section>
 
